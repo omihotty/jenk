@@ -1,1 +1,1 @@
-<h1> from AMS.............</h1>
+<h1> from AMS.............only from ans</h1>
