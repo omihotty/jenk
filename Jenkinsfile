@@ -9,7 +9,7 @@ node{
   
   }
   stage('Email Notification'){
-     emailext body: 'mjkuytfgbvnjkhiyfuhgcnbm,klhiuyfjcghnb', subject: 'hi for test', to: 'omkar.saini@esteltelecom.com'
+     emailext body: 'this is only for testing purpose', subject: 'Hi this is for testing purpose', to: 'singh.88omkar@gmail.com'
   
   }
 
