@@ -10,14 +10,10 @@ node{
     }
   }
 
-    stage("Quality Gate Statuc Check"){
-          timeout(time: 1, unit: 'HOURS') {
-              def qg = waitForQualityGate()
-              if (qg.status != 'OK') {
-                  emailext body: 'Build is Fail', subject: 'This Build has failed', to: 'singh.88omkar@gmail.com' 
-              }
-          }
-      }    
+  stage('Compile-package'){
+    def mvnHome = tool name: 'maven', type: 'maven'
+    sh "${mvnHome}/bin/mvn package"  
+  }
 
   stage('Email Notification'){
      emailext body: 'this is only for testing purpose', subject: 'Hi this is for testing purpose', to: 'singh.88omkar@gmail.com'  
